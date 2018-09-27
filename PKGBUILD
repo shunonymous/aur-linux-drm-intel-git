@@ -7,16 +7,16 @@
 # Contributor: Shun Terabayashi <shunonymous at gmail.com>
 # Contributor: Brad McCormack <bradmccormack100 at gmail.com>
 
-pkgbase=linux-git
+pkgbase=linux-drm-intel-git
 _srcname=linux
-pkgver=4.18rc1.r23.g9ffc59d57228
+pkgver=drm.intel.fixes.2018.08.29.r1259.g35c37ade79cd
 pkgrel=1
 arch=('i686' 'x86_64')
 url="http://www.kernel.org/"
 license=('GPL2')
 makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'git' 'libelf')
 options=('!strip')
-source=('git+https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux'
+source=('linux::git+https://anongit.freedesktop.org/git/drm/drm-intel.git'
         # the main kernel config files
         'config' 'config.x86_64'
         # standard config files for mkinitcpio ramdisk
@@ -24,7 +24,7 @@ source=('git+https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/l
 sha256sums=('SKIP'
             'becc0c98cff692dee9500f19d38882636caf4c58d5086c7725690a245532f5dc'
             'e1ceaa588598958894af6d2f85600bbfa9f4b840a22ad4b1fd0298555216fea6'
-            '95fcfdfcb9d540d1a1428ce61e493ddf2c2a8ec96c8573deeadbb4ee407508c7')
+            '423fafd6c40ef3b0a813ceaf95e1ca66775a693993a45dd1dab9367babb29ba6')
 
 _kernelname=${pkgbase#linux}
 
